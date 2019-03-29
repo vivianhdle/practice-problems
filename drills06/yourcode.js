@@ -1,15 +1,16 @@
 
 
-function removeClassFromElement(){
-	
+function removeClassFromElement(element,targetClass){
+	$(element).removeClass(targetClass);
 }
 
-function toggleClassOnElement(){
-	
+function toggleClassOnElement(element,targetClass){
+	$(element).toggleClass(targetClass);
 }
 
-function hideElements(  ){
-	
+function hideElements( target, type ){
+    type
+	$(target).
 }
 
 function addAttributeToElement( ){

@@ -70,5 +70,5 @@ Kansas City, Mo 63102`
     ]
   },
   functionToTest: 'makeLabel'
-}]
+}];
 
