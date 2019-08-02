@@ -13,15 +13,15 @@ function changeElements(targetClass){
         "nine":9
     }
     for (let key in map){
-        let text = $(`${targetClass}:contains(${key})`);
+        let text = $(`${targetClass}:contains(${key})`).text();
         if (text){
-            $(targetClass).text(key);
+            $(`${targetClass}:contains(${key})`).text(map[key]);
         }
     }
 }
 
-function appendTextToElement(){
-
+function appendTextToElement(targetClass,targetText){
+    console.log($(targetClass).text());
 }
 
 function addClass(){
