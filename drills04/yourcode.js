@@ -1,7 +1,7 @@
 
 
 function changeElements(targetClass){
-    const key  = {
+    const map  = {
         "one":1,
         "two":2,
         "three":3,
@@ -12,7 +12,12 @@ function changeElements(targetClass){
         "eight":8,
         "nine":9
     }
-    $(targetClass).text(key[$(targetClass).text()]);
+    for (let key in map){
+        let text = $(`${targetClass}:contains(${key})`);
+        if (text){
+            $(targetClass).text(key);
+        }
+    }
 }
 
 function appendTextToElement(){
