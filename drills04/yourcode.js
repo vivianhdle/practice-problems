@@ -21,13 +21,20 @@ function changeElements(targetClass){
 }
 
 function appendTextToElement(targetClass,targetText){
-    console.log($(targetClass).text());
+    $(targetClass).each(function(){
+        const newText = $(this).text() + targetText;
+        console.log(newText);
+        $(this).text(newText);
+    })
 }
 
-function addClass(){
+function addClass(targetClass,addClass){
+    $(targetClass).each(function(){
+        $(this).addClass(addClass);
+    })
 }
 
-function removeElements(){
-
+function removeElements(selector){
+    $(selector).remove();
 }
 
